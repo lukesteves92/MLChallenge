@@ -1,8 +1,12 @@
 package com.inspirecoding.mlchallenge.domain.model.conditions
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
+@Parcelize
 data class ConditionsDomain(
-    val context_restrictions: List<String>,
-    val eligible: Boolean,
-    val end_time: String,
-    val start_time: String
-)
+    val contextRestrictions: List<String>? = null,
+    val eligible: Boolean? = null,
+    val endTime: String? = null,
+    val startTime: String? = null
+) : Parcelable

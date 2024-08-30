@@ -1,5 +1,8 @@
 package com.inspirecoding.mlchallenge.data.remote.model.differentialpricing
 
+import com.google.gson.annotations.SerializedName
+
 data class DifferentialPricingResponse(
-    val id: Int
+    @SerializedName("id")
+    val id: Int? = null
 )

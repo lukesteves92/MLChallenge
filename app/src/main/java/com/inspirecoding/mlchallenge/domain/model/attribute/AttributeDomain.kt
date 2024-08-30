@@ -1,17 +1,21 @@
 package com.inspirecoding.mlchallenge.domain.model.attribute
 
+import android.os.Parcelable
 import com.inspirecoding.mlchallenge.domain.model.value.ValueStructDomain
 import com.inspirecoding.mlchallenge.domain.model.value.ValueXXDomain
+import kotlinx.parcelize.Parcelize
+import kotlinx.parcelize.RawValue
 
+@Parcelize
 data class AttributeDomain(
-    val attribute_group_id: String,
-    val attribute_group_name: String,
-    val id: String,
-    val name: String,
-    val source: Long,
-    val value_id: String,
-    val value_name: String,
-    val value_struct: ValueStructDomain,
-    val value_type: String,
-    val values: List<ValueXXDomain>
-)
+    val attributeGroupId: String? = null,
+    val attributeGroupName: String? = null,
+    val id: String? = null,
+    val name: String? = null,
+    val source: Long? = null,
+    val valueId: String? = null,
+    val valueName: String? = null,
+    val valueStruct: @RawValue ValueStructDomain? = null,
+    val valueType: String? = null,
+    val values: @RawValue List<ValueXXDomain>? = null
+) : Parcelable

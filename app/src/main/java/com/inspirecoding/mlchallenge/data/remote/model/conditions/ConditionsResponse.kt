@@ -1,8 +1,14 @@
 package com.inspirecoding.mlchallenge.data.remote.model.conditions
 
+import com.google.gson.annotations.SerializedName
+
 data class ConditionsResponse(
-    val context_restrictions: List<String>,
-    val eligible: Boolean,
-    val end_time: String,
-    val start_time: String
+    @SerializedName("context_restrictions")
+    val contextRestrictions: List<String>? = null,
+    @SerializedName("eligible")
+    val eligible: Boolean? = null,
+    @SerializedName("end_time")
+    val endTime: String? = null,
+    @SerializedName("start_time")
+    val startTime: String? = null
 )

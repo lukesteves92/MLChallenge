@@ -1,5 +1,6 @@
 package com.inspirecoding.mlchallenge.data.remote.model.result
 
+import com.google.gson.annotations.SerializedName
 import com.inspirecoding.mlchallenge.data.remote.model.saleprice.SalePriceResponse
 import com.inspirecoding.mlchallenge.data.remote.model.seller.SellerResponse
 import com.inspirecoding.mlchallenge.data.remote.model.shipping.ShippingResponse
@@ -8,38 +9,72 @@ import com.inspirecoding.mlchallenge.data.remote.model.differentialpricing.Diffe
 import com.inspirecoding.mlchallenge.data.remote.model.installments.InstallmentsResponse
 
 data class ResultResponse(
-    val accepts_mercadopago: Boolean,
-    val attributeResponses: List<AttributeResponse>,
-    val available_quantity: Int,
-    val buying_mode: String,
-    val catalog_listing: Boolean,
-    val catalog_product_id: String,
-    val category_id: String,
-    val condition: String,
-    val currency_id: String,
-    val differential_pricing: DifferentialPricingResponse,
-    val discounts: Any,
-    val domain_id: String,
-    val id: String,
-    val installmentsResponse: InstallmentsResponse,
-    val inventory_id: String,
-    val listing_type_id: String,
-    val official_store_id: Int,
-    val official_store_name: String,
-    val order_backend: Int,
-    val original_price: Double,
-    val permalink: String,
-    val price: Double,
-    val promotions: List<Any>,
-    val sale_price: SalePriceResponse,
-    val sanitized_title: String,
-    val sellerResponse: SellerResponse,
-    val shippingResponse: ShippingResponse,
-    val site_id: String,
-    val stop_time: String,
-    val thumbnail: String,
-    val thumbnail_id: String,
-    val title: String,
-    val use_thumbnail_id: Boolean,
-    val winner_item_id: Any
+    @SerializedName("accepts_mercadopago")
+    val acceptsMercadoPago: Boolean? = null,
+    @SerializedName("attributeResponses")
+    val attributeResponses: List<AttributeResponse>? = null,
+    @SerializedName("available_quantity")
+    val availableQuantity: Int? = null,
+    @SerializedName("buying_mode")
+    val buyingMode: String? = null,
+    @SerializedName("catalog_listing")
+    val catalogListing: Boolean? = null,
+    @SerializedName("catalog_product_id")
+    val catalogProductId: String? = null,
+    @SerializedName("category_id")
+    val categoryId: String? = null,
+    @SerializedName("condition")
+    val condition: String? = null,
+    @SerializedName("currency_id")
+    val currencyId: String? = null,
+    @SerializedName("differential_pricing")
+    val differentialPricing: DifferentialPricingResponse? = null,
+    @SerializedName("discounts")
+    val discounts: Any? = null,
+    @SerializedName("domain_id")
+    val domainId: String? = null,
+    @SerializedName("id")
+    val id: String? = null,
+    @SerializedName("installmentsResponse")
+    val installmentsResponse: InstallmentsResponse? = null,
+    @SerializedName("inventory_id")
+    val inventoryId: String? = null,
+    @SerializedName("listing_type_id")
+    val listingTypeId: String? = null,
+    @SerializedName("official_store_id")
+    val officialStoreId: Int? = null,
+    @SerializedName("official_store_name")
+    val officialStoreName: String? = null,
+    @SerializedName("order_backend")
+    val orderBackend: Int? = null,
+    @SerializedName("original_price")
+    val originalPrice: Double? = null,
+    @SerializedName("permalink")
+    val permalink: String? = null,
+    @SerializedName("price")
+    val price: Double? = null,
+    @SerializedName("promotions")
+    val promotions: List<Any>? = null,
+    @SerializedName("sale_price")
+    val salePrice: SalePriceResponse? = null,
+    @SerializedName("sanitized_title")
+    val sanitizedTitle: String? = null,
+    @SerializedName("sellerResponse")
+    val sellerResponse: SellerResponse? = null,
+    @SerializedName("shippingResponse")
+    val shippingResponse: ShippingResponse? = null,
+    @SerializedName("site_id")
+    val siteId: String? = null,
+    @SerializedName("stop_time")
+    val stopTime: String? = null,
+    @SerializedName("thumbnail")
+    val thumbnail: String? = null,
+    @SerializedName("thumbnail_id")
+    val thumbnailId: String? = null,
+    @SerializedName("title")
+    val title: String? = null,
+    @SerializedName("use_thumbnail_id")
+    val useThumbnailId: Boolean? = null,
+    @SerializedName("winner_item_id")
+    val winnerItemId: Any? = null
 )

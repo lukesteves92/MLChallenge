@@ -1,17 +1,28 @@
 package com.inspirecoding.mlchallenge.data.remote.model.saleprice
 
+import com.google.gson.annotations.SerializedName
 import com.inspirecoding.mlchallenge.data.remote.model.conditions.ConditionsResponse
 import com.inspirecoding.mlchallenge.data.remote.model.metadata.MetadataResponse
 
 data class SalePriceResponse(
-    val amount: Double,
-    val conditionsResponse: ConditionsResponse,
-    val currency_id: String,
-    val exchange_rate: Any,
-    val metadataResponse: MetadataResponse,
-    val payment_method_prices: List<Any>,
-    val payment_method_type: String,
-    val price_id: String,
-    val regular_amount: Double,
-    val type: String
+    @SerializedName("amount")
+    val amount: Double? = null,
+    @SerializedName("conditionsResponse")
+    val conditionsResponse: ConditionsResponse? = null,
+    @SerializedName("currency_id")
+    val currencyId: String? = null,
+    @SerializedName("exchange_rate")
+    val exchangeRate: Any? = null,
+    @SerializedName("metadataResponse")
+    val metadataResponse: MetadataResponse? = null,
+    @SerializedName("payment_method_prices")
+    val paymentMethodPrices: List<Any>? = null,
+    @SerializedName("payment_method_type")
+    val paymentMethodType: String? = null,
+    @SerializedName("price_id")
+    val priceId: String? = null,
+    @SerializedName("regular_amount")
+    val regularAmount: Double? = null,
+    @SerializedName("type")
+    val type: String? = null
 )

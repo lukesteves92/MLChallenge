@@ -1,12 +1,17 @@
 package com.inspirecoding.mlchallenge.domain.model.shipping
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+import kotlinx.parcelize.RawValue
+
+@Parcelize
 data class ShippingDomain(
-    val benefits: Any,
-    val free_shipping: Boolean,
-    val logistic_type: String,
-    val mode: String,
-    val promise: Any,
-    val shipping_score: Int,
-    val store_pick_up: Boolean,
-    val tags: List<String>
-)
+    val benefits: @RawValue Any? = null,
+    val freeShipping: Boolean? = null,
+    val logisticType: String? = null,
+    val mode: String? = null,
+    val promise: @RawValue Any? = null,
+    val shippingScore: Int? = null,
+    val storePickUp: Boolean? = null,
+    val tags: List<String>? = null
+) : Parcelable
