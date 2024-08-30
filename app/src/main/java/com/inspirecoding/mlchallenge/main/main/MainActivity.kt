@@ -1,4 +1,4 @@
-package com.inspirecoding.mlchallenge
+package com.inspirecoding.mlchallenge.main.main
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

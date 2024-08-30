@@ -23,6 +23,7 @@ android {
             useSupportLibrary = true
         }
         android.buildFeatures.buildConfig = true
+        buildConfigField(type = "String", name = "URL_BASE", value = "\"https://api.mercadolibre.com\"")
     }
 
     buildTypes {
