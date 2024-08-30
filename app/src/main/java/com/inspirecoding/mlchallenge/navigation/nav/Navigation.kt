@@ -9,6 +9,7 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.google.accompanist.pager.ExperimentalPagerApi
+import com.inspirecoding.mlchallenge.features.home.view.HomeScreen
 import com.inspirecoding.mlchallenge.navigation.manager.NavigationCommand
 import com.inspirecoding.mlchallenge.navigation.manager.NavigationManager
 import com.inspirecoding.mlchallenge.navigation.manager.NavigationType
@@ -32,14 +33,7 @@ fun Navigation(navController: NavHostController, startDestination: String) {
         popExitTransition = { ExitTransition.None },
     ) {
         composable(Screen.Home.route) {
-//            HomeScreen()
-        }
-        composable(
-            route = Screen.Details.route + "/{$DETAILS_KEY}",
-            arguments = Screen.Details.arguments
-        ) { entry ->
-//            val recipe = entry.arguments?.getParcelable<RecipeDomain>(DETAILS_KEY)
-//            DetailsScreen(recipe = recipe)
+            HomeScreen()
         }
         composable(
             route = Screen.Search.route + "/{$SEARCH_KEY}",
