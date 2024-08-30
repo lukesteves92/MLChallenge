@@ -1,6 +1,8 @@
 package com.inspirecoding.mlchallenge.data.remote.services.responseapi
 
-sealed class ResponseApi{
-    class Success(var data: Any?) : ResponseApi()
-    class ErrorException(var data: Any?) : ResponseApi()
+import com.inspirecoding.mlchallenge.data.utils.exception.MLChallengeException
+
+sealed class ResponseApi<out T> {
+    class Success<T>(var data: T?) : ResponseApi<T>()
+    class ErrorException(var errorException: MLChallengeException) : ResponseApi<Nothing>()
 }

@@ -4,5 +4,5 @@ import com.inspirecoding.mlchallenge.data.remote.services.responseapi.ResponseAp
 import retrofit2.Response
 
 interface RequestWrapper {
-    suspend fun <T : Any> wrapper(call: suspend () -> Response<T>): ResponseApi
+    suspend fun <T : Any> wrapper(call: suspend () -> Response<T>): ResponseApi<T>
 }
