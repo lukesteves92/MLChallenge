@@ -10,9 +10,21 @@ Welcome to Mercado Pago Challenge project! This guide will walk you through sett
 <p align="center">
 <img src="previews/preview0.png" alt="drawing" width="270px" />
 <img src="previews/preview1.png" alt="drawing" width="270px" />
-<img src="previews/preview2.gif" alt="drawing" width="270px" />
-<img src="previews/preview3.gif" alt="drawing" width="270px" /></br>
+<img src="previews/preview2.png" alt="drawing" width="270px" />
+<img src="previews/preview3.png" alt="drawing" width="270px" /></br>
 </p>
+
+## 🛠 Tech Stack & Open Source Libraries
+- Minimum SDK level 24.
+- 100% [Jetpack Compose](https://developer.android.com/jetpack/compose) based + [Coroutines](https://github.com/Kotlin/kotlinx.coroutines) + [Flow](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/) for asynchronous.
+- Jetpack
+  - Compose: Android’s modern toolkit for building native UI.
+  - ViewModel: UI related data holder and lifecycle aware.
+  - App Startup: Provides a straightforward, performant way to initialize components at application startup.
+  - Navigation: For navigating screens and [Koin Compose] for injecting dependencies.
+  - [Koin]: Dependency Injection.
+- [Coil]: Jetpack Compose image loading library.
+- [Retrofit2 & OkHttp3](https://github.com/square/retrofit): Construct the REST APIs and paging network data.
 
 ## ✍️ Prerequisites
 
