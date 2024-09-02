@@ -16,6 +16,10 @@ val dataModule = module {
         CoroutineScope(Dispatchers.IO)
     }
 
+    single {
+        RetrofitConfig.provideOkHttpClient()
+    }
+
     single<RequestWrapper> {
         RequestWrapperImpl()
     }

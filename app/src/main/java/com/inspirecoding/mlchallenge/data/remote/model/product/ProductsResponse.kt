@@ -16,17 +16,17 @@ data class ProductsResponse(
     val availableSorts: List<AvailableSortResponse>? = null,
     @SerializedName("country_default_time_zone")
     val countryDefaultTimeZone: String? = null,
-    @SerializedName("filterResponses")
+    @SerializedName("filters")
     val filterResponses: List<FilterResponse>? = null,
-    @SerializedName("pagingResponse")
+    @SerializedName("paging")
     val pagingResponse: PagingResponse? = null,
     @SerializedName("pdp_tracking")
     val pdpTracking: PdpTrackingResponse? = null,
-    @SerializedName("resultResponses")
+    @SerializedName("results")
     val resultResponses: List<ResultResponse>? = null,
     @SerializedName("site_id")
     val siteId: String? = null,
-    @SerializedName("sortResponse")
+    @SerializedName("sort")
     val sortResponse: SortResponse? = null,
     @SerializedName("user_context")
     val userContext: Any? = null

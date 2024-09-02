@@ -3,7 +3,7 @@ package com.inspirecoding.mlchallenge.ui.color
 import android.annotation.SuppressLint
 import androidx.compose.ui.graphics.Color
 
-val OrangeMain = Color(0xFFE45700)
+val YellowMain = Color(0xFFFFE600)
 val LightBlack = Color(0xFF545454)
 val BackgroundColor = Color(0xFFEFEEEB)
 

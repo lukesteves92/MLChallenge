@@ -3,6 +3,7 @@ package com.inspirecoding.mlchallenge.data.remote.mapper
 import com.inspirecoding.mlchallenge.data.remote.model.attribute.AttributeResponse
 import com.inspirecoding.mlchallenge.data.remote.model.availablefilter.AvailableFilterResponse
 import com.inspirecoding.mlchallenge.data.remote.model.availablesort.AvailableSortResponse
+import com.inspirecoding.mlchallenge.data.remote.model.categories.CategoriesResponseItem
 import com.inspirecoding.mlchallenge.data.remote.model.conditions.ConditionsResponse
 import com.inspirecoding.mlchallenge.data.remote.model.differentialpricing.DifferentialPricingResponse
 import com.inspirecoding.mlchallenge.data.remote.model.filter.FilterResponse
@@ -26,6 +27,7 @@ import com.inspirecoding.mlchallenge.data.remote.model.value.ValueXXResponse
 import com.inspirecoding.mlchallenge.domain.model.attribute.AttributeDomain
 import com.inspirecoding.mlchallenge.domain.model.availablefilter.AvailableFilterDomain
 import com.inspirecoding.mlchallenge.domain.model.availablesort.AvailableSortDomain
+import com.inspirecoding.mlchallenge.domain.model.categories.CategoriesDomainItem
 import com.inspirecoding.mlchallenge.domain.model.conditions.ConditionsDomain
 import com.inspirecoding.mlchallenge.domain.model.differentialpricing.DifferentialPricingDomain
 import com.inspirecoding.mlchallenge.domain.model.filter.FilterDomain
@@ -244,4 +246,9 @@ internal fun ResultResponse.toDomain() = ResultDomain(
     title = this.title,
     useThumbnailId = this.useThumbnailId,
     winnerItemId = this.winnerItemId
+)
+
+internal fun CategoriesResponseItem.toDomain() = CategoriesDomainItem(
+    id = this.id,
+    name = this.name
 )

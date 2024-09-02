@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ML Challenge</string>
+    <string name="bt_ml_challenge_cancel">cancelar</string>
+    <string name="ml_challenge_content_accessibility_back">volver</string>
+    <string name="ml_challenge_tb_title">ML Challenge</string>
+    <string name="ml_challenge_search_recipe">buscar un producto</string>
 </resources>

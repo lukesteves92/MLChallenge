@@ -8,7 +8,8 @@ import org.koin.dsl.module
 val presentationModule = module {
     viewModel {
         HomeViewModel(
-            getProductsByCategory = get()
+            getProductsByCategory = get(),
+            getCategories = get()
         )
     }
 
