@@ -5,20 +5,16 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.inspirecoding.mlchallenge.navigation.nav.Navigation
 import com.inspirecoding.mlchallenge.navigation.screen.Screen
-import com.inspirecoding.mlchallenge.ui.color.BackgroundColor
-import com.inspirecoding.mlchallenge.ui.theme.MLChallengeTheme
+import com.inspirecoding.mlchallenge.ui.theme.color.BackgroundColor
+import com.inspirecoding.mlchallenge.ui.theme.main.MLChallengeTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,4 +1,4 @@
-package com.inspirecoding.mlchallenge.ui.components
+package com.inspirecoding.mlchallenge.ui.components.toolbar
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -24,8 +24,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import com.inspirecoding.mlchallenge.R
-import com.inspirecoding.mlchallenge.ui.color.BackgroundColor
-import com.inspirecoding.mlchallenge.ui.color.YellowMain
+import com.inspirecoding.mlchallenge.ui.theme.color.BackgroundColor
+import com.inspirecoding.mlchallenge.ui.theme.color.YellowMain
+import com.inspirecoding.mlchallenge.ui.components.text.CustomTextField
 import com.inspirecoding.mlchallenge.utils.Constants.Text.EMPTY_STRING_DEFAULT
 
 @Composable

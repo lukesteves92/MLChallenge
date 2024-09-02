@@ -1,4 +1,4 @@
-package com.inspirecoding.mlchallenge.ui.components
+package com.inspirecoding.mlchallenge.ui.components.text
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -30,9 +30,9 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.inspirecoding.mlchallenge.R
-import com.inspirecoding.mlchallenge.ui.color.LightBlack
-import com.inspirecoding.mlchallenge.ui.color.YellowMain
-import com.inspirecoding.mlchallenge.ui.theme.Typography
+import com.inspirecoding.mlchallenge.ui.theme.color.LightBlack
+import com.inspirecoding.mlchallenge.ui.theme.color.YellowMain
+import com.inspirecoding.mlchallenge.ui.theme.type.Typography
 import com.inspirecoding.mlchallenge.utils.Constants.Numbers.KEY_NUMBER_ONE
 import com.inspirecoding.mlchallenge.utils.Constants.Text.EMPTY_STRING_DEFAULT
 

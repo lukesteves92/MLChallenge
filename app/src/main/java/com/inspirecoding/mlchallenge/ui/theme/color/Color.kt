@@ -1,4 +1,4 @@
-package com.inspirecoding.mlchallenge.ui.color
+package com.inspirecoding.mlchallenge.ui.theme.color
 
 import android.annotation.SuppressLint
 import androidx.compose.ui.graphics.Color

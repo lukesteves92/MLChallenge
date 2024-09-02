@@ -1,4 +1,4 @@
-package com.inspirecoding.mlchallenge.ui.components
+package com.inspirecoding.mlchallenge.ui.components.chip
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -13,8 +13,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.inspirecoding.mlchallenge.domain.model.categories.CategoriesDomainItem
-import com.inspirecoding.mlchallenge.ui.color.YellowMain
-import com.inspirecoding.mlchallenge.ui.theme.Typography
+import com.inspirecoding.mlchallenge.ui.theme.color.YellowMain
+import com.inspirecoding.mlchallenge.ui.theme.type.Typography
 
 @Composable
 fun Chip(

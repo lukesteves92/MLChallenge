@@ -1,4 +1,4 @@
-package com.inspirecoding.mlchallenge.ui.components
+package com.inspirecoding.mlchallenge.ui.components.chip
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.PaddingValues

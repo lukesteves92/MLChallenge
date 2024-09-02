@@ -1,4 +1,4 @@
-package com.inspirecoding.mlchallenge.ui.components
+package com.inspirecoding.mlchallenge.ui.components.product
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background

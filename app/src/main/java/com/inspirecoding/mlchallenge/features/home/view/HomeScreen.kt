@@ -10,8 +10,8 @@ import com.inspirecoding.mlchallenge.R
 import com.inspirecoding.mlchallenge.extensions.features.rememberFlowWithLifecycle
 import com.inspirecoding.mlchallenge.features.home.state.HomeState
 import com.inspirecoding.mlchallenge.features.home.viewmodel.HomeViewModel
-import com.inspirecoding.mlchallenge.ui.components.ProductItem
-import com.inspirecoding.mlchallenge.ui.components.SearchToolbar
+import com.inspirecoding.mlchallenge.ui.components.product.ProductItem
+import com.inspirecoding.mlchallenge.ui.components.toolbar.SearchToolbar
 import com.inspirecoding.mlchallenge.utils.Constants.Text.EMPTY_STRING_DEFAULT
 import org.koin.androidx.compose.getViewModel
 
