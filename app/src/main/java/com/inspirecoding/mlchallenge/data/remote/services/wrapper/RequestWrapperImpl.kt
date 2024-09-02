@@ -14,7 +14,7 @@ class RequestWrapperImpl: RequestWrapper {
     override suspend fun <T : Any> wrapper(call: suspend () -> Response<T>): ResponseApi<T> {
         return try {
             val response = call.invoke()
-            val errorBody = response.errorBody()?.string() ?: EMPTY_STRING_DEFAULT
+            val errorBody = response.errorBody()?.string().orEmpty()
 
             when {
                 response.isSuccessful -> {
@@ -37,8 +37,8 @@ class RequestWrapperImpl: RequestWrapper {
                     val error = errorBody.toDefaultError()
                     ResponseApi.ErrorException(
                         MLChallengeException.DefaultError(
-                            message = error?.message ?: EMPTY_STRING_DEFAULT,
-                            code = error?.code ?: EMPTY_STRING_DEFAULT
+                            message = error?.message.orEmpty(),
+                            code = error?.code.orEmpty()
                         )
                     )
                 }
