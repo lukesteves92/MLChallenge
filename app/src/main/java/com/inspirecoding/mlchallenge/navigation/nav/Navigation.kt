@@ -10,6 +10,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.inspirecoding.mlchallenge.features.home.view.HomeScreen
+import com.inspirecoding.mlchallenge.features.search.view.SearchScreen
 import com.inspirecoding.mlchallenge.navigation.manager.NavigationCommand
 import com.inspirecoding.mlchallenge.navigation.manager.NavigationManager
 import com.inspirecoding.mlchallenge.navigation.manager.NavigationType
@@ -40,7 +41,7 @@ fun Navigation(navController: NavHostController, startDestination: String) {
             arguments = Screen.Search.arguments
         ) { entry ->
             val searchText = entry.arguments?.getString(SEARCH_KEY)
-//            SearchScreen(searchText = searchText)
+            SearchScreen(searchText = searchText)
         }
     }
 }

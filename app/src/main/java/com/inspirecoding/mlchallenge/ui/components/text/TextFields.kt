@@ -127,7 +127,7 @@ fun CustomTextField(
             Text(
                 text = stringResource(id = R.string.bt_ml_challenge_cancel),
                 textAlign = TextAlign.Start,
-                color = if (transparentSearchBar) LightBlack else Color.White,
+                color = if (transparentSearchBar) LightBlack else Color.Black,
                 modifier = Modifier
                     .background(if (transparentSearchBar) Color.Transparent else YellowMain)
                     .weight(1f, true)

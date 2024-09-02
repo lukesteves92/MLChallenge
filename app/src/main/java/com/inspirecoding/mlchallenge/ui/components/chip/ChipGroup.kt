@@ -11,7 +11,7 @@ import com.inspirecoding.mlchallenge.domain.model.categories.CategoriesDomainIte
 
 @Composable
 fun ChipGroup(
-    category: CategoriesDomainItem?,
+    category: String,
     list: List<CategoriesDomainItem>,
     onSelectionChanged: (CategoriesDomainItem) -> Unit,
     modifier: Modifier = Modifier
@@ -26,7 +26,7 @@ fun ChipGroup(
                 Chip(
                     text = it,
                     item = item,
-                    isSelected = category?.id == item.id,
+                    isSelected = category == item.id,
                     onSelectionChanged =  { selected ->
                         onSelectionChanged.invoke(selected)
                     }

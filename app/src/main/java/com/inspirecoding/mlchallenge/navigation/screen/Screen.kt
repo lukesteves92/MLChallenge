@@ -17,15 +17,6 @@ sealed class Screen(val route: String) {
         URLEncoder.encode(gson.toJson(this), StandardCharsets.UTF_8.toString())
 
     data object Home : Screen(route = "home")
-    data object Details : Screen(route = "Details") {
-        val arguments = listOf(
-            navArgument(DETAILS_KEY) {
-//                type = NavigationNavType(RecipeDomain::class.java)
-            }
-        )
-
-//        fun createRoute(recipe: RecipeDomain?) = route.plus("/${recipe.toGson()}")
-    }
 
     data object Search : Screen(route = "Search") {
         val arguments = listOf(

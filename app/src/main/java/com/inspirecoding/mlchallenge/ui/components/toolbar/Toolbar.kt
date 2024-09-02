@@ -1,28 +1,31 @@
 package com.inspirecoding.mlchallenge.ui.components.toolbar
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import coil.compose.rememberAsyncImagePainter
 import com.inspirecoding.mlchallenge.R
 import com.inspirecoding.mlchallenge.ui.theme.color.BackgroundColor
 import com.inspirecoding.mlchallenge.ui.theme.color.YellowMain
@@ -34,6 +37,7 @@ fun SearchToolbar(
     modifier: Modifier = Modifier,
     goBack: Boolean = true,
     onSearchClick: () -> Unit = {},
+    searchToolbarText: String = EMPTY_STRING_DEFAULT,
     searchText: String = EMPTY_STRING_DEFAULT,
     onNavigateUpClick: () -> Unit = {},
     onTextChanged: (String) -> Unit,
@@ -42,22 +46,24 @@ fun SearchToolbar(
 ) {
     Scaffold(
         topBar = {
-            ToolbarSearch(onBackPressed = {
-                onNavigateUpClick.invoke()
-            })
+            ToolbarSearch(
+                title = searchToolbarText,
+                onBackPressed = {
+                    onNavigateUpClick.invoke()
+                })
         },
         containerColor = BackgroundColor,
         bottomBar = contentBottom,
         content = { values ->
             val hasSearch = remember { mutableStateOf(false) }
 
-            Column(modifier = Modifier.padding(PaddingValues(top = values.calculateTopPadding()))) {
+            Column(modifier = Modifier.padding(values)) {
                 CustomTextField(
                     modifier = modifier
                         .padding(bottom = 5.dp)
                         .background(YellowMain),
                     text = searchText,
-                    hintText = stringResource(id = R.string.ml_challenge_search_recipe),
+                    hintText = stringResource(id = R.string.ml_challenge_search_product),
                     leadingIcon = {
                         Icon(
                             painter = painterResource(id = R.drawable.ml_challenge_ic_search),
@@ -107,10 +113,13 @@ fun ToolbarSearch(
             if (!title.isNullOrEmpty()) {
                 Text(text = title, maxLines = 1, overflow = TextOverflow.Ellipsis)
             } else {
-                Text(
-                    text = stringResource(id = R.string.ml_challenge_tb_title),
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
+                Image(
+                    modifier = Modifier
+                        .size(54.dp)
+                        .background(Color.Transparent),
+                    painter = rememberAsyncImagePainter(R.drawable.logo_ml),
+                    contentScale = ContentScale.Fit,
+                    contentDescription = null
                 )
             }
         },

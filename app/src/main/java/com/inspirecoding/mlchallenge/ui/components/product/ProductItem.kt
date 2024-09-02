@@ -21,6 +21,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -45,10 +46,11 @@ fun ProductItem(
             .background(Color.White, shape = Shapes.large)
             .padding(8.dp)
     ) {
+
         Image(
             painter = rememberAsyncImagePainter(
                 ImageRequest.Builder(LocalContext.current)
-                    .data(imageRes ?: R.drawable.no_image_available)
+                    .data(imageRes)
                     .apply(block = fun ImageRequest.Builder.() {
                         error(R.drawable.no_image_available)
                         placeholder(R.drawable.no_image_available)
@@ -87,7 +89,7 @@ fun ProductItem(
                 onClick = onDetailsClick,
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF3483FA))
             ) {
-                Text(text = "Detalhes", color = Color.White)
+                Text(text = stringResource(id = R.string.tb_ml_challenge_details_screen), color = Color.White)
             }
         }
     }

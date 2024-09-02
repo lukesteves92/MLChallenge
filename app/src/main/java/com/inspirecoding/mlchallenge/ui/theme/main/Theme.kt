@@ -8,6 +8,7 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import com.inspirecoding.mlchallenge.ui.theme.color.YellowMain
 import com.inspirecoding.mlchallenge.ui.theme.type.Typography
@@ -15,13 +16,15 @@ import com.inspirecoding.mlchallenge.ui.theme.type.Typography
 private val DarkColorScheme = darkColorScheme(
     primary = YellowMain,
     secondary = YellowMain,
-    tertiary = YellowMain
+    tertiary = YellowMain,
+    onBackground = Color.White
 )
 
 private val LightColorScheme = lightColorScheme(
     primary = YellowMain,
     secondary = YellowMain,
-    tertiary = YellowMain
+    tertiary = YellowMain,
+    onBackground = Color.White
 
     /* Other default colors to override
     background = Color(0xFFFFFBFE),

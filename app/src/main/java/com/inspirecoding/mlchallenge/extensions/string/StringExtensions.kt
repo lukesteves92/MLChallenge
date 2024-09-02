@@ -4,6 +4,8 @@ import com.google.gson.Gson
 import com.inspirecoding.mlchallenge.domain.model.exception.GenericException
 import java.net.URLDecoder
 import java.nio.charset.StandardCharsets
+import java.text.NumberFormat
+import java.util.Locale
 
 fun String.decode(): String = URLDecoder.decode(this, StandardCharsets.UTF_8.toString())
 
@@ -18,3 +20,14 @@ internal fun String?.toDefaultError() = try {
 
 internal fun String?.containsTagHtml() =
     (this != null && this.contains("html"))
+
+internal fun String?.imageToSecureProtocol(): String? = if (!this.isNullOrEmpty()) {
+    this.replace("http://", "https://")
+} else {
+    this
+}
+
+fun Double?.formatToARS(): String {
+    val numberFormat = NumberFormat.getCurrencyInstance(Locale("es", "AR"))
+    return this?.let { numberFormat.format(it) } ?: "N/A"
+}
