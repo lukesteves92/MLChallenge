@@ -5,7 +5,16 @@ Welcome to Mercado Pago Challenge project! This guide will walk you through sett
 
 `Jetpack Compose` & `MVI Architecture`
 
-## Prerequisites
+## 📷 Previews
+
+<p align="center">
+<img src="previews/preview0.png" alt="drawing" width="270px" />
+<img src="previews/preview1.png" alt="drawing" width="270px" />
+<img src="previews/preview2.gif" alt="drawing" width="270px" />
+<img src="previews/preview3.gif" alt="drawing" width="270px" /></br>
+</p>
+
+## ✍️ Prerequisites
 
 - Android Studio installed on your machine with Java 17.
 
@@ -31,21 +40,7 @@ Welcome to Mercado Pago Challenge project! This guide will walk you through sett
 
    Open Android Studio and navigate to `File` > `Settings` > `Build, Execution...` > `Build Tools` > `Gradle` and select the new `Gradle SDK` downloaded, Java 17.
 
-5. **Configure Android App:**
-
-    - Open the ML Challenge project in Android Studio.
-    - Locate the `build.gradle.kts(app)` and set the public URL defined above.
-    ```
-    buildConfigField(type = "String", name = "URL_BASE", value = "\"https://yoururl.com\"")
-    ```
-    - Now, locate the `AndroidManifest.xml` and configure your Google Maps API Key. (Check https://cloud.google.com/apis)
-    ```
-    <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="" />
-    ```
-
-10. **Run the App:**
+5. **Run the App:**
 
     - Build and run the ML Challenge app in Android Studio.
 
