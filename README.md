@@ -56,4 +56,4 @@ Welcome to Mercado Libre Challenge project! This guide will walk you through set
 
     - Build and run the ML Challenge app in Android Studio.
 
-Congratulations! You have successfully set up the environment to test the Mercado Pago Challenge project on your local machine. If you encounter any issues, feel free to reach out for assistance. Enjoy!
+Congratulations! You have successfully set up the environment to test the Mercado Libre Challenge project on your local machine. If you encounter any issues, feel free to reach out for assistance. Enjoy!
