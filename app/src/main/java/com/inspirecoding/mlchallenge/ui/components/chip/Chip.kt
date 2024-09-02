@@ -39,7 +39,7 @@ fun Chip(
         Text(
             modifier = Modifier.padding(start = 14.dp, end = 14.dp, top = 8.dp, bottom = 10.dp),
             text = text.lowercase(),
-            style = Typography.labelSmall,
+            style = Typography.labelMedium,
             fontWeight = FontWeight.Bold,
             color = if (isSelected) Color.Black else Color.DarkGray
         )
