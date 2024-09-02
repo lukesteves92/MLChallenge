@@ -1,7 +1,7 @@
 # ML Challenge - Setup Guide - by Lucas Esteves
 ## ML Challenge App | Android | Kotlin
 
-Welcome to Mercado Pago Challenge project! This guide will walk you through setting up the environment to test the project on your local machine.
+Welcome to Mercado Libre Challenge project! This guide will walk you through setting up the environment to test the project on your local machine.
 
 `Jetpack Compose` & `MVI Architecture`
 
