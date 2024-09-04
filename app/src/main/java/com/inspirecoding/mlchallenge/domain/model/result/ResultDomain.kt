@@ -33,7 +33,7 @@ data class ResultDomain(
     val orderBackend: Int? = null,
     val originalPrice: Double? = null,
     val permalink: String? = null,
-    val price: Double? = null,
+    val price: String? = null,
     val promotions: @RawValue List<Any>? = null,
     val salePrice: @RawValue SalePriceDomain? = null,
     val sanitizedTitle: String? = null,

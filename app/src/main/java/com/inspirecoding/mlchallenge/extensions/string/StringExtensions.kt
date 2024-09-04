@@ -27,7 +27,7 @@ internal fun String?.imageToSecureProtocol(): String? = if (!this.isNullOrEmpty(
     this
 }
 
-fun Double?.formatToARS(): String {
+fun String?.formatToARS(): String {
     val numberFormat = NumberFormat.getCurrencyInstance(Locale("es", "AR"))
-    return this?.let { numberFormat.format(it) } ?: "N/A"
+    return this?.toDouble().let { numberFormat.format(it) } ?: "N/A"
 }

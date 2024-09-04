@@ -123,9 +123,9 @@ fun Search(
                         ) {
                             items(state.productList) { item ->
                                 ProductItem(
-                                    imageRes = item.thumbnail.imageToSecureProtocol(),
+                                    imageRes = item.thumbnail,
                                     title = item.title.orEmpty(),
-                                    price = item.price.formatToARS(),
+                                    price = item.price.orEmpty(),
                                     onDetailsClick = {
                                         product.value = item
                                         coroutineScope.launch {
